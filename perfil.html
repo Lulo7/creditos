@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Mi Perfil - DRAKO</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/logo.png" width="30" height="30" class="d-inline-block align-top rounded-circle" alt=""> DRAKO
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item" id="navMiPerfil" style="display:none;">
+                    <a class="nav-link" href="perfil.html">Mi Perfil</a>
+                </li>
+            </ul>
+            <div class="navbar-nav" id="navButtons">
+                <a class="btn btn-outline-warning mr-2 mb-2 mb-lg-0" href="login.html">Iniciar Sesión</a>
+                <a class="btn btn-warning" href="registro.html">Registrarse</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8 col-lg-6">
+                <div class="card p-4 shadow">
+                    <div id="sinSesion" class="text-center py-5" style="display:none;">
+                        <i class="fas fa-user-circle fa-5x mb-4"></i>
+                        <h3>Debes iniciar sesión</h3>
+                        <p class="lead">Inicia sesión para ver y editar tu perfil.</p>
+                        <a href="login.html" class="btn btn-warning btn-lg">Iniciar Sesión</a>
+                    </div>
+
+                    <div id="conSesion">
+                        <h3 class="text-center mb-4">Mi Perfil</h3>
+                        <div class="form-row">
+                            <div class="form-group col-sm-6">
+                                <label>Correo electrónico</label>
+                                <input type="email" class="form-control" id="email" placeholder="correo@ejemplo.com">
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label>Contraseña</label>
+                                <input type="password" class="form-control" id="password" placeholder="********">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-6">
+                                <label>Nombre completo</label>
+                                <input type="text" class="form-control" id="name" placeholder="Nombre">
+                            </div>
+                            <div class="form-group col-sm-3">
+                                <label>ID</label>
+                                <input type="text" class="form-control" id="identificacion" placeholder="123456789">
+                            </div>
+                            <div class="form-group col-sm-3">
+                                <label>Edad</label>
+                                <input type="number" class="form-control" id="edad" placeholder="Edad">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-8">
+                                <label>Dirección de residencia</label>
+                                <input type="text" class="form-control" id="direccion" placeholder="Calle 123 # 45-67">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label>Teléfono de contacto</label>
+                                <input type="text" class="form-control" id="telefono" placeholder="3001234567">
+                            </div>
+                        </div>
+                        <button class="btn btn-warning btn-block" onclick="guardarPerfil()">Guardar cambios</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
+    <script>
+        var usuario = JSON.parse(localStorage.getItem("usuarioLogeado"))
+        if(usuario){
+            document.getElementById("email").value = usuario.email || ""
+            document.getElementById("password").value = usuario.password || ""
+            document.getElementById("name").value = usuario.name || ""
+            document.getElementById("identificacion").value = usuario.identificacion || ""
+            document.getElementById("edad").value = usuario.edad || ""
+            document.getElementById("direccion").value = usuario.direccion || ""
+            document.getElementById("telefono").value = usuario.telefono || ""
+        } else {
+            document.getElementById("conSesion").style.display = "none"
+            document.getElementById("sinSesion").style.display = "block"
+        }
+        actualizarNavbar()
+    </script>
+</body>
+</html>

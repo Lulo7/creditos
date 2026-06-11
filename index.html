@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>DRAKO - Tu crédito fácil</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/logo.png" width="30" height="30" class="d-inline-block align-top rounded-circle" alt=""> DRAKO
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item" id="navMiPerfil" style="display:none;">
+                    <a class="nav-link" href="perfil.html">Mi Perfil</a>
+                </li>
+            </ul>
+            <div class="navbar-nav" id="navButtons">
+                <a class="btn btn-outline-warning mr-2 mb-2 mb-lg-0" href="login.html">Iniciar Sesión</a>
+                <a class="btn btn-warning" href="registro.html">Registrarse</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="display-4 font-weight-bold">Tu crédito, más fácil que nunca</h1>
+            <p class="lead mb-4">Aprobación en 24 horas. Tasas competitivas. Sin papeleo complicado.</p>
+            <button onclick="solicitarCredito()" class="btn btn-warning btn-lg px-5">Solicita tu crédito</button>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <h2 class="text-center text-white mb-5">Nuestros Servicios</h2>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100 text-center shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-user fa-3x text-warning mb-3"></i>
+                        <h5 class="card-title">Crédito Personal</h5>
+                        <p class="card-text">Desde $100,000 hasta $10,000,000. Plazos flexibles de 6 a 60 meses.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100 text-center shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-home fa-3x text-warning mb-3"></i>
+                        <h5 class="card-title">Crédito Hipotecario</h5>
+                        <p class="card-text">Hasta el 80% del valor de tu vivienda. Tasas fijas y cuotas cómodas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100 text-center shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-car fa-3x text-warning mb-3"></i>
+                        <h5 class="card-title">Crédito Automotriz</h5>
+                        <p class="card-text">Financia hasta el 90% de tu vehículo nuevo o usado. Aprobación rápida.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100 text-center shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-briefcase fa-3x text-warning mb-3"></i>
+                        <h5 class="card-title">Crédito Empresarial</h5>
+                        <p class="card-text">Impulsa tu negocio con capital de trabajo. Montos desde $1,000,000.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4">
+                    <img src="assets/logo.png" alt="Nuestro equipo" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6 text-white">
+                    <h2>¿Por qué elegirnos?</h2>
+                    <p class="lead">En DRAKO entendemos tus necesidades financieras. Con más de 10 años de experiencia, hemos ayudado a miles de personas a alcanzar sus metas.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-warning mr-2"></i>Aprobación en 24 horas</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-warning mr-2"></i>Tasas fijas sin sorpresas</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-warning mr-2"></i>Sin codeudor</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-warning mr-2"></i>Atención personalizada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5">
+        <h2 class="text-center text-white mb-5">Contáctanos</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-4 text-center text-white mb-4">
+                <div class="contact-icon">
+                    <img src="assets/correo.png" alt="Email">
+                </div>
+                <p class="mb-0">drako@credito.com</p>
+            </div>
+            <div class="col-md-4 text-center text-white mb-4">
+                <div class="contact-icon">
+                    <img src="assets/telefono.png" alt="Teléfono">
+                </div>
+                <p class="mb-0">+57 312 528 4308</p>
+            </div>
+            <div class="col-md-4 text-center text-white mb-4">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt fa-3x text-warning"></i>
+                </div>
+                <p class="mb-0">Tunja, Colombia</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2026 DRAKO. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-right">
+                    <a href="#" class="text-white mr-3"><img src="assets/insta.png" alt="Instagram" class="footer-icon"></a>
+                    <a href="#" class="text-white mr-3"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-whatsapp fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
+    <script>actualizarNavbar()</script>
+</body>
+</html>
