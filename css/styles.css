@@ -41,6 +41,13 @@ body{
     transform: translateY(-5px);
 }
 
+a.card-link{
+    color: inherit;
+}
+a.card-link:hover{
+    text-decoration: none;
+}
+
 .contact-icon{
     height: 60px;
     display: flex;
